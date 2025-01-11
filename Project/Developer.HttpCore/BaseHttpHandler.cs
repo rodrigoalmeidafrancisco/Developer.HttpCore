@@ -14,8 +14,7 @@ namespace Developer.HttpCore
         public readonly HttpClient _client;
         private readonly bool _configureAwait;
 
-        public BaseHttpHandler(string linkBaseAddress, bool notVerificationSSL = false, bool configureAwait = false, CookieContainer cookieContainer = null,
-            string phraseRejection = null)
+        public BaseHttpHandler(string linkBaseAddress, string phraseRejection = null, bool notVerificationSSL = true, bool configureAwait = false, CookieContainer cookieContainer = null)
         {
             _configureAwait = configureAwait;
 
